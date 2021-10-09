@@ -233,7 +233,7 @@ var streamAudioToWebSocket = function streamAudioToWebSocket(userMediaStream) {
   //let url = createPresignedUrl();
   //open up our WebSocket connection
 
-  socket = new WebSocket("wss://" + window.location.host + "/websocket");
+  socket = new WebSocket("wss://" + window.location.host);
   socket.binaryType = "arraybuffer";
   var sampleRate = 0; // when we get audio data from the mic, send it to the WebSocket if possible
 
