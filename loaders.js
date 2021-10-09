@@ -13,7 +13,7 @@ export const checkEnvironmentAndLoadEnvVariablesFromS3 = async (s3ClientConfig =
     const controller = new AbortController();
     const timeout = setTimeout(
         () => { controller.abort(); },
-        150,
+        1000,
     );
     try {
         // make a call to the metadata service to see if we're running on an ec2 instance
