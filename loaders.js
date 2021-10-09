@@ -9,7 +9,7 @@ import dotenv from 'dotenv';
 
 
 // load environment variables from s3.env if we're running on an ec2 instance
-export const checkEnvironmentAndLoadEnvVariablesFromS3 = async (s3ClientConfig = { region: "eu-west-2" }, s3CommandInput = { Bucket: 'purple-sound', Key: 'environment-variables/aws.env' }) => {
+export const checkEnvironmentAndLoadEnvVariablesFromS3 = async (s3ClientConfig = { region: "eu-west-1" }, s3CommandInput = { Bucket: 'mageweave', Key: 'environment variables/echosign/.env' }) => {
     const controller = new AbortController();
     const timeout = setTimeout(
         () => { controller.abort(); },
